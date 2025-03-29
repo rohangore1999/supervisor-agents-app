@@ -1,0 +1,85 @@
+{
+  "info": {
+    "_postman_id": "12345678-1234-1234-1234-123456789012",
+    "name": "Supervisor Agent API",
+    "description": "A collection for testing the Supervisor Agent API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Process Input",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"input\": \"what is 2+2?\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/process",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "process"]
+        },
+        "description": "Process user input through the multi-agent orchestration system."
+      },
+      "response": []
+    },
+    {
+      "name": "Math Question Example",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"input\": \"give me how many A's present in a string of AVYGABAAHKJHDAAAAUHBU?\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/process",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "process"]
+        },
+        "description": "Process a string analysis question."
+      },
+      "response": []
+    },
+    {
+      "name": "Research Question Example",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"input\": \"What are the main impacts of climate change on agriculture in Southeast Asia?\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/process",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "process"]
+        },
+        "description": "Process a research question."
+      },
+      "response": []
+    }
+  ]
+}
