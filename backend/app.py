@@ -1,6 +1,5 @@
 from flask import Flask, request, jsonify
 import re
-import json
 from typing import Literal # Typing utilities for type hints and better code readability
 from pydantic import BaseModel, Field  # `BaseModel` is the base class used to create data models, `Field` is used to provide additional metadata
 from langchain_core.messages import HumanMessage # Human message classes for handling human messages in LangChain
@@ -9,7 +8,6 @@ from langchain_groq import ChatGroq # Interface for using the ChatGroq platform 
 from langgraph.types import Command # LangGraph types for extending commands and functionalities
 from langgraph.graph import StateGraph, START, END, MessagesState # Graph-related utilities for building workflows and state machines
 from langgraph.prebuilt import create_react_agent # Prebuilt tools and agents for streamlined development
-from pprint import pprint # Utilities for debugging and displaying complex data structures in an organized way
 from langchain_community.tools import DuckDuckGoSearchRun ## Research tool
 
 app = Flask(__name__)
